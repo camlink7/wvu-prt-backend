@@ -44,7 +44,3 @@ async def all_status_reports():
     for report in all:
         reports_json.append(report.to_dict())
     return {"message": "Successfully fetched all status reports", "reports": reports_json}
-
-
-if __name__ == "__main__":
-    uvicorn.run(api, host="prtpoller.botneticbots.xyz", port=443)
