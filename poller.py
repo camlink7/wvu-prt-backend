@@ -1,11 +1,9 @@
 from dotenv import load_dotenv, find_dotenv
 from Database import Database
-
 from DB_Models.StatusReport import StatusReport
 import requests
 from requests.exceptions import HTTPError
 import time
-
 
 def poll(db):
     try:
