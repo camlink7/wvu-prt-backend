@@ -29,5 +29,5 @@ def fetch_and_store_latest():
 while (True):
     fetch_and_store_latest()
     print("ran")
-    time.sleep(900) # Every 15 minutes, poll the api
+    time.sleep(1200) # Every 20 minutes, poll the api
 
