@@ -25,3 +25,8 @@ class StatusReport(Base):
         return self.message
     def get_buses_dispatched(self):
         return self.buses_dispatched
+    
+    def to_dict(self):
+        keys = self.__mapper__.attrs.keys()
+        attrs = vars(self)
+        return { k : attrs[k]  for k in keys}

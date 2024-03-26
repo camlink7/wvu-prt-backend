@@ -35,3 +35,11 @@ thread.start()
 @api.get("/")
 async def root():
     return {"message": "API is alive!"}
+
+@api.get("/all")
+async def all_status_reports():
+    all = db.session.query(StatusReport).order_by(StatusReport.timestamp.desc()).all()
+    reports_json = []
+    for report in all:
+        reports_json.append(report.to_dict())
+    return {"message": "Successfully fetched all status reports", "reports": reports_json}
