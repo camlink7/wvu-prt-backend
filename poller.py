@@ -27,13 +27,4 @@ def poll(db):
         print(f'HTTP error occurred: {http_err}')
     except Exception as err:
         print(f'Other error occurred: {err}')
-<<<<<<< HEAD:main.py
-    
-
-while (True):
-    fetch_and_store_latest()
-    print("ran")
-    time.sleep(1200) # Every 20 minutes, poll the api
-=======
->>>>>>> 9208448acd5957a98aa125cc029b2fd17f0b8ac2:poller.py
 
